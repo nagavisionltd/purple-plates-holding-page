@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.genspark.ai/api/page_private?id=priizrsk -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Purple Energy Collection | Natural Luxury</title>
+    <meta name="stripe-publishable-key" content="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdidXJpd3Nza3BldHRweXdyeXFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTczNTg2ODYsImV4cCI6MjA3MjkzNDY4Nn0.HPY92T-kCEAOvlZGtJOZExo1IGI5g5Brx0_dQ4bXj0M">
+    <link href="./Tesla Purple Energy Collection _ Natural Luxury_files/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 25%, #e2e8f0 50%, #cbd5e0 75%, #a0aec0 100%);
+        }
+        
+        .purple-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .earth-gradient {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+        }
+        
+        .natural-gradient {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .wellness-gradient {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(20px);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #2d3748;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(252, 182, 159, 0.4);
+        }
+        
+        .price-strike {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        
+        .section-padding {
+            padding: 4rem 0;
+        }
+        
+        .cart-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            cursor: pointer;
+        }
+        
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cart-content {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+<style>
+    .genspark-notice-dialog {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .genspark-notice-content {
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      box-sizing: border-box;
+      padding: 10px 30px 30px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .genspark-notice-title {
+      color: #000;
+      font-family: Arial;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+    }
+
+    .genspark-notice-list {
+      margin: 24px 0;
+      
+      color: #606366;
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-left: 12px;
+    }
+
+    .genspark-notice-list li {
+      margin-bottom: 12px;
+      list-style-type: disc;
+    }
+
+    .genspark-notice-list li a {
+      color: #606366;
+      text-decoration: underline;
+    }
+
+    .genspark-notice-checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+
+      color: #232425;
+
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .genspark-notice-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+      
+    .genspark-notice-ok {
+      color: #232425;
+
+      text-align: center;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      padding: 6px 14px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  </style></head>
+<body class="bg-gray-50">
+
+    <!-- Cart Indicator -->
+    <div id="cartIndicator" class="cart-indicator" onclick="toggleCart()">
+        Cart (<span id="cartCount">0</span>) - £<span id="cartTotal">0</span>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Your Cart</h3>
+                <button onclick="toggleCart()" class="text-gray-500 hover:text-gray-700 text-xl">×</button>
+            </div>
+            <div id="cartItems"><p class="text-gray-500 text-center py-8">Your cart is empty</p></div>
+            <div class="border-t pt-4 mt-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-xl font-bold">Total: £<span id="modalCartTotal">0</span></span>
+                </div>
+                <button id="checkoutBtn" class="btn-primary text-white w-full py-3 rounded-full font-medium">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-effect fixed w-full z-50 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl md:text-3xl playfair font-light bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">Tesla Purple Energy Plates</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="https://www.genspark.ai/api/page_private?id=priizrsk#products" class="text-gray-700 hover:text-purple-600 transition-colors">Collection</a>
+                <a href="https://www.genspark.ai/api/page_private?id=priizrsk#bundle" class="text-gray-700 hover:text-purple-600 transition-colors">Bundle</a>
+            </div>
+            <div class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                FREE UK SHIPPING
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="playfair text-6xl md:text-7xl font-light text-gray-800 mb-6 leading-tight">
+                harness pure
+                <span class="block font-medium bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                    energy
+                </span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 font-light leading-relaxed">
+                Authentic Tesla Purple Energy Plates, crafted by Ralph Bergstresser<br>
+                following Nikola Tesla's revolutionary energy field theories
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="btn-primary text-white px-8 py-4 rounded-full font-medium text-lg">
+                    Shop Collection
+                </button>
+                <div class="text-center">
+                    <div class="text-sm text-gray-500 uppercase tracking-wide">UK &amp; Europe Launch</div>
+                    <div class="text-lg font-semibold text-gray-700">Pre-Order Exclusive Pricing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-padding natural-gradient">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-5xl font-light text-white mb-4">
+                    energy collection
+                </h2>
+                <p class="text-xl text-white opacity-90 max-w-2xl mx-auto">
+                    Each piece is hand-crafted from high-grade aluminum and charged in our audio-vibratory chamber
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+                
+                <!-- Purple Energy Ring -->
+                <div class="product-card bg-white bg-opacity-20 rounded-3xl p-8 text-center">
+                    <img src="./Tesla Purple Energy Collection _ Natural Luxury_files/womans-hand-purple-gold-ring.jpg" alt="Tesla Purple Energy Ring" class="w-full h-64 object-cover rounded-2xl mb-6">
+                    <h3 class="playfair text-2xl font-semibold text-white mb-3">Purple Energy Ring</h3>
+                    <p class="text-white opacity-80 mb-4">Continuous energy field wrapped around your finger</p>
+                    <div class="flex justify-center items-center gap-3 mb-6">
+                        <span class="price-strike text-lg text-white opacity-60">£25</span>
+                        <span class="text-3xl font-bold text-white">£20</span>
+                        <span class="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Pre-Order</span>
+                    </div>
+                    <div class="space-y-3">
+                        <button onclick="addToCart('ring', 'Purple Energy Ring', 20)" class="btn-secondary w-full py-3 rounded-full font-medium">
+                            Add to Cart
+                        </button>
+                        <button onclick="buyNow('ring', 'Purple Energy Ring', 20)" class="btn-primary text-white w-full py-3 rounded-full font-medium">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Small Energy Disc -->
+                <div class="product-card bg-white bg-opacity-20 rounded-3xl p-8 text-center">
+                    <img src="./Tesla Purple Energy Collection _ Natural Luxury_files/purple-energy-disc-woman-wearing_5be6169d-2cbd-4f19-afe7-ef20a2304b88.jpg" alt="Tesla Small Energy Disc" class="w-full h-64 object-cover rounded-2xl mb-6">
+                    <h3 class="playfair text-2xl font-semibold text-white mb-3">Small Energy Disc</h3>
+                    <p class="text-white opacity-80 mb-4">Perfect for pocket carry or pendant necklace</p>
+                    <div class="flex justify-center items-center gap-3 mb-6">
+                        <span class="price-strike text-lg text-white opacity-60">£20</span>
+                        <span class="text-3xl font-bold text-white">£15</span>
+                        <span class="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Pre-Order</span>
+                    </div>
+                    <div class="space-y-3">
+                        <button onclick="addToCart('disc', 'Small Energy Disc', 15)" class="btn-secondary w-full py-3 rounded-full font-medium">
+                            Add to Cart
+                        </button>
+                        <button onclick="buyNow('disc', 'Small Energy Disc', 15)" class="btn-primary text-white w-full py-3 rounded-full font-medium">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Energy Bracelet -->
+                <div class="product-card bg-white bg-opacity-20 rounded-3xl p-8 text-center">
+                    <img src="./Tesla Purple Energy Collection _ Natural Luxury_files/purple-bracelet-jeans-woman-wearing.jpg" alt="Tesla Energy Bracelet" class="w-full h-64 object-cover rounded-2xl mb-6">
+                    <h3 class="playfair text-2xl font-semibold text-white mb-3">Energy Bracelet</h3>
+                    <p class="text-white opacity-80 mb-4">Free energy frequency through your entire body</p>
+                    <div class="flex justify-center items-center gap-3 mb-6">
+                        <span class="price-strike text-lg text-white opacity-60">£25</span>
+                        <span class="text-3xl font-bold text-white">£20</span>
+                        <span class="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Pre-Order</span>
+                    </div>
+                    <div class="space-y-3">
+                        <button onclick="addToCart('bracelet', 'Energy Bracelet', 20)" class="btn-secondary w-full py-3 rounded-full font-medium">
+                            Add to Cart
+                        </button>
+                        <button onclick="buyNow('bracelet', 'Energy Bracelet', 20)" class="btn-primary text-white w-full py-3 rounded-full font-medium">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Large Energy Plate -->
+                <div class="product-card bg-white bg-opacity-20 rounded-3xl p-8 text-center">
+                    <img src="./Tesla Purple Energy Collection _ Natural Luxury_files/purple-plate-plant-energize.jpg" alt="Tesla Large Energy Plate" class="w-full h-64 object-cover rounded-2xl mb-6">
+                    <h3 class="playfair text-2xl font-semibold text-white mb-3">Large Energy Plate</h3>
+                    <p class="text-white opacity-80 mb-4">12"×12" with 36" energy field radius</p>
+                    <div class="flex justify-center items-center gap-3 mb-6">
+                        <span class="price-strike text-lg text-white opacity-60">£69.99</span>
+                        <span class="text-3xl font-bold text-white">£59.99</span>
+                        <span class="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Pre-Order</span>
+                    </div>
+                    <div class="space-y-3">
+                        <button onclick="addToCart('plate', 'Large Energy Plate', 59.99)" class="btn-secondary w-full py-3 rounded-full font-medium">
+                            Add to Cart
+                        </button>
+                        <button onclick="buyNow('plate', 'Large Energy Plate', 59.99)" class="btn-primary text-white w-full py-3 rounded-full font-medium">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bundle Section -->
+    <section id="bundle" class="section-padding purple-gradient">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="playfair text-5xl font-light text-white mb-8">
+                complete energy bundle
+            </h2>
+            <p class="text-xl text-white opacity-90 mb-12 max-w-3xl mx-auto">
+                Experience the full spectrum of Tesla's energy field technology with our complete collection. 
+                Save £16 when you order the complete bundle.
+            </p>
+            
+            <div class="bg-white bg-opacity-10 rounded-3xl p-12 max-w-2xl mx-auto mb-12">
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="text-white">
+                        <div class="text-sm opacity-80">Individual Pre-Order Total:</div>
+                        <div class="text-2xl font-bold line-through opacity-60">£115</div>
+                    </div>
+                    <div class="text-white">
+                        <div class="text-sm opacity-80">Bundle Price:</div>
+                        <div class="text-4xl font-bold">£99</div>
+                    </div>
+                </div>
+                
+                <div class="text-center mb-8">
+                    <div class="text-2xl font-bold text-white mb-2">Save £16</div>
+                    <div class="text-white opacity-80">+ FREE UK Shipping (Worth £15)</div>
+                </div>
+                
+                <button onclick="buyBundle()" class="btn-secondary w-full py-4 rounded-full font-semibold text-lg mb-4">
+                    Buy Bundle - £99
+                </button>
+                
+                <div class="text-white text-sm opacity-80">
+                    Includes: Ring, Small Disc, Bracelet &amp; Large Plate<br>
+                    Pre-order now • Ships February 2025
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uses & Benefits -->
+    <section class="section-padding wellness-gradient">
+        <div class="container mx-auto px-6">
+            <h2 class="playfair text-5xl font-light text-center text-gray-800 mb-16">
+                enhance your wellness
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-50 rounded-3xl p-8 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div class="w-8 h-8 bg-purple-500 rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Energy Enhancement</h3>
+                    <p class="text-gray-600">Carry a small plate in your pocket or purse for increased personal energy throughout the day</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-50 rounded-3xl p-8 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div class="w-8 h-8 bg-green-500 rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Food Preservation</h3>
+                    <p class="text-gray-600">Place the large plate in your refrigerator to keep food fresh longer and enhance water quality</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-50 rounded-3xl p-8 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Meditation &amp; Healing</h3>
+                    <p class="text-gray-600">Use plates during meditation, place on areas of discomfort, or energize crystals for 12 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="playfair text-5xl font-light text-center text-gray-800 mb-16">
+                real experiences
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-3xl p-8">
+                    <p class="text-gray-600 mb-6 italic">"I tested these purple plates using a pendulum and the Bovis scale: they vibrate at around 2,000,000 Bovis units, which is impressive. I'm really happy with the results!"</p>
+                    <div class="text-sm text-gray-500">Customer from Lithuania, Europe</div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-3xl p-8">
+                    <p class="text-gray-600 mb-6 italic">"Within 24 hrs of wearing the bracelet with purple disc, the pain was completely gone. I wear my pendant everyday and feel positive energy all around."</p>
+                    <div class="text-sm text-gray-500">Melissa D. Williamson</div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-3xl p-8">
+                    <p class="text-gray-600 mb-6 italic">"I had two dying plants that I put on the large purple plate, and within a few days they were healthy enough to be repotted! They continue to thrive."</p>
+                    <div class="text-sm text-gray-500">Verified Purchase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Order Info -->
+    <section class="section-padding earth-gradient">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="playfair text-5xl font-light text-white mb-8">
+                uk &amp; europe launch
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xl text-white opacity-90 mb-12">
+                    After 28 years of success in America, we're bringing Tesla Purple Energy Plates to the UK and Europe 
+                    with faster delivery through our new European supplier network.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white bg-opacity-10 rounded-2xl p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Pre-Order Exclusive</h3>
+                        <p class="text-white opacity-80">Special pricing only available during pre-order period</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-2xl p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Free UK Shipping</h3>
+                        <p class="text-white opacity-80">Complimentary delivery on all pre-orders to the UK</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-2xl p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Faster Delivery</h3>
+                        <p class="text-white opacity-80">European suppliers mean quicker delivery times</p>
+                    </div>
+                </div>
+                
+                <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="btn-primary text-white px-12 py-4 rounded-full font-semibold text-xl">
+                    Reserve Your Collection Now
+                </button>
+                
+                <div class="text-white opacity-80 mt-6">
+                    Mass shipping begins February 2025 • 99.9% customer satisfaction rate
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tesla Energy</h3>
+                    <p class="text-gray-400 text-sm">Authentic Purple Energy Plates following Nikola Tesla's revolutionary energy field theories.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Purple Energy Ring</li>
+                        <li>Small Energy Disc</li>
+                        <li>Energy Bracelet</li>
+                        <li>Large Energy Plate</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Collection</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Complete Bundle</li>
+                        <li>Individual Items</li>
+                        <li>Pre-Order Pricing</li>
+                        <li>28 Years of Success</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Money Back Guarantee</li>
+                        <li>Free UK Shipping</li>
+                        <li>Customer Reviews</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+                <p>© 2025 Tesla Purple Energy Collection. All rights reserved. | purpleplates.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Initialize Stripe (Live-ready)
+        const publishableKeyMeta = document.querySelector('meta[name="stripe-publishable-key"]');
+        const stripePublishableKey = publishableKeyMeta && publishableKeyMeta.getAttribute('content');
+        if (!stripePublishableKey) {
+            console.error('Stripe publishable key is missing. Set meta[name="stripe-publishable-key"].');
+        }
+        const stripe = stripePublishableKey ? Stripe(stripePublishableKey) : null;
+
+        // Initialize Supabase
+        const SUPABASE_URL = 'https://gburiwsskpettpywryqg.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdidXJpd3Nza3BldHRweXdyeXFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTczNTg2ODYsImV4cCI6MjA3MjkzNDY4Nn0.HPY92T-kCEAOvlZGtJOZExo1IGI5g5Brx0_dQ4bXj0M';
+        const { createClient } = supabase;
+        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        // Cart management
+        let cart = [];
+        
+        function updateCartDisplay() {
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+            const modalCartTotal = document.getElementById('modalCartTotal');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            cartCount.textContent = totalItems;
+            cartTotal.textContent = totalPrice.toFixed(2);
+            modalCartTotal.textContent = totalPrice.toFixed(2);
+            
+            updateCartItems();
+        }
+        
+        function updateCartItems() {
+            const cartItems = document.getElementById('cartItems');
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-gray-500 text-center py-8">Your cart is empty</p>';
+                return;
+            }
+            
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div>
+                        <h4 class="font-semibold">${item.name}</h4>
+                        <p class="text-sm text-gray-600">£${item.price.toFixed(2)} x ${item.quantity}</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="changeQuantity('${item.id}', -1)" class="w-8 h-8 bg-gray-200 rounded-full">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="changeQuantity('${item.id}', 1)" class="w-8 h-8 bg-gray-200 rounded-full">+</button>
+                        <button onclick="removeFromCart('${item.id}')" class="text-red-500 ml-2">Remove</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function addToCart(id, name, price) {
+            const existingItem = cart.find(item => item.id === id);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ id, name, price, quantity: 1 });
+            }
+            updateCartDisplay();
+            
+            // Show success message
+            showMessage(`${name} added to cart!`);
+        }
+        
+        function buyNow(id, name, price) {
+            addToCart(id, name, price);
+            setTimeout(() => {
+                toggleCart();
+            }, 500);
+        }
+        
+        function buyBundle() {
+            // Clear cart and add bundle
+            cart = [];
+            cart.push({
+                id: 'bundle',
+                name: 'Complete Collection Bundle',
+                price: 99,
+                quantity: 1
+            });
+            updateCartDisplay();
+            setTimeout(() => {
+                toggleCart();
+            }, 500);
+        }
+        
+        function changeQuantity(id, change) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(id);
+                } else {
+                    updateCartDisplay();
+                }
+            }
+        }
+        
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartDisplay();
+        }
+        
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+        }
+        
+        function showMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 80px;
+                right: 20px;
+                background: #10b981;
+                color: white;
+                padding: 15px 25px;
+                border-radius: 25px;
+                z-index: 3000;
+                box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+            `;
+            document.body.appendChild(messageDiv);
+            
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 3000);
+        }
+        
+        // Stripe Checkout
+        document.getElementById('checkoutBtn').addEventListener('click', async () => {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            
+            try {
+                const { data, error } = await supabaseClient.functions.invoke('create-payment', {
+                    body: { items: cart }
+                });
+
+                if (error) {
+                    throw error;
+                }
+
+                if (data?.url) {
+                    window.location.href = data.url;
+                }
+            } catch (error) {
+                console.error('Checkout error:', error);
+                alert('An unexpected error occurred during checkout. Please try again.');
+            }
+        });
+        
+        // Close cart when clicking outside
+        document.getElementById('cartModal').addEventListener('click', (e) => {
+            if (e.target.id === 'cartModal') {
+                toggleCart();
+            }
+        });
+        
+        // Initialize cart display
+        updateCartDisplay();
+    </script><iframe name="__privateStripeController9701" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./Tesla Purple Energy Collection _ Natural Luxury_files/controller-with-preconnect-e542a96d4d09f86139d61711c52be2fd.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe>
+<script defer="" src="./Tesla Purple Energy Collection _ Natural Luxury_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"97538e2a4f207a4a","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+
+
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDuWOzys49ADXb0T2sqlsOkTpcEbjOjGbVdZFcmo6SKJziyrmygZWSyLGX91rX0q%2Fr5h79xTJf47Of7p%2B73f%2Fo51qushG%2BSVOfCYZ0B6Fa9XHxXXJS%2Bp0kJQgiEhCOt%2Bwm08aODVS%2BBCeozrdbMRJUTh7tg5BAh%2F95Thk2OednomFJPjHQLtIcLk3EuXO17K7ZNSPSRnlLxrMMqp%2FGvhfOXyoCbuMMiiXjSaZbnIFtB6ETuAHlIbHQe2wVVfaxPOk2PixKsOn1w0zD55OlUHfavfah5fnjS2aJzonsfH75xRCjSAqputcwzJhQceGTnYzexsAqtJDJh08Xm8C4elm8%2FcxfNNW9oFpitAafs9dSkkbEi2kq%2B1RZjoX2Lg9sxl7ysDlrpUAWWozQOwCNP61Df55Ud8vsPHyQUXjSDVRj3Ap4zOtL30bUZWbz%2FVeY0ZkcjyUQaBHqbw2QajUMRPoZ3fYAB1A9dd5qPn142TLoNQXqrYg55OnpixfQuW%2BzIsj%2BxPeD%2Fuj67nqy1Kb6vC1CuM%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDuWOzys49ADXb0T2sqlsOkTpcEbjOjGbVdZFcmo6SKJziyrmygZWSyLGX91rX0q/r5h79xTJf47Of7p+73f/o51qushG+SVOfCYZ0B6Fa9XHxXXJS+p0kJQgiEhCOt+wm08aODVS+BCeozrdbMRJUTh7tg5BAh/95Thk2OednomFJPjHQLtIcLk3euXO17K7ZNSPSRnlLxrMMqp/GvhfOXyoCbuMMiiXjSaZbnIFtB6ETuAHlIbHQe2wVVfaxPOk2PixKsOn1w0zD55OlUHfavfah5fnjS2aJzonsfH75xRCjSAqputcwzJhQceGTnYzexsAqtJDJh08Xm8C44elm8/cxfNNW9oFpitAafs9dSkkbEi2kq+1RZjoX2Lg9sxl7ysDlrpUAWWozQOwCNP61Df55Ud8vsPHyQUXjSDVRj3Ap4zOtL30bUZWbz/VeY0ZkcjyUQaBHqbw2QajUMRPoZ3fYAB1A9dd5qPn142TLoNQXqrYg55OnpixfQuW+zIsj+xPeD/uj67nqy1Kb6vC1CuM=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="./Tesla Purple Energy Collection _ Natural Luxury_files/notice_dialog.js"></script>
+    <iframe name="__privateStripeMetricsController9700" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./Tesla Purple Energy Collection _ Natural Luxury_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>
